@@ -79,4 +79,5 @@ LEFT JOIN (
     SELECT livro_id, COUNT() AS qtd_vendida
     FROM vendas
     GROUP BY livro_id
-)
+) AS livros_vendidos ON livros.id = livros_vendidos.livro_id
+GROUP BY autores.id;
